@@ -1,0 +1,28 @@
+<?php
+
+function migrate_csv_uninstall()
+{
+    \Drupal::database()
+        ->delete('config')
+        ->condition('name', 'migrate_plus.migration.article_image')
+        ->execute();
+
+        \Drupal::database()
+        ->delete('config')
+        ->condition('name', 'migrate_plus.migration.tags')
+        ->execute();
+
+        \Drupal::database()
+        ->delete('config')
+        ->condition('name', 'migrate_plus.migration.articles_import')
+        ->execute(); 
+        \Drupal::database()
+        ->delete('config')
+        ->condition('name', 'migrate_plus.migration.business_import')
+        ->execute();
+        \Drupal::database()
+        ->delete('config')
+        ->condition('name', 'migrate_plus.migration.users_import')
+        ->execute();
+
+}

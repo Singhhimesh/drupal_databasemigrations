@@ -1,0 +1,33 @@
+# migrations metadata
+id: users_import
+label: 'Business Locations'
+migration_group: migration
+
+source:
+  plugin: user_plugin
+ 
+destination:
+  plugin: entity:node
+
+
+process:
+  type:
+    plugin: default_value
+    default_value: surname
+
+  title: first_name
+  field_email_ad: email
+  field_first_name: first_name
+  field_last_name: last_name
+  field_surname: surname
+  field_user_name: username
+
+  uid:
+    plugin: default_value
+    default_value: 1
+
+migration_dependencies:
+  required: { }
+
+dependencies: { }
+

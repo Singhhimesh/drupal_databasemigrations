@@ -1,0 +1,32 @@
+# migrations metadata
+id: business_import
+label: 'Business Locations'
+migration_group: migration
+
+source:
+  plugin: business_location
+ 
+destination:
+  plugin: entity:node
+
+
+process:
+  type:
+    plugin: default_value
+    default_value: business_location
+
+  title: name
+  field_country: country 
+  field_landmark: landmark
+  field_state	: state	
+  field_z: zip_code
+  field_account_method: default_payment_accounts
+  uid:
+    plugin: default_value
+    default_value: 1
+
+migration_dependencies:
+  required: { }
+
+dependencies: { }
+

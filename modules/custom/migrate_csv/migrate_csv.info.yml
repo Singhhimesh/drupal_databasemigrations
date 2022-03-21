@@ -1,0 +1,14 @@
+name: Business Migrations
+description: this module will help to migrate business data from the another database
+core: 8.x
+type: module
+pacakage: Custom Module
+core_version_requirement: ^8 || ^9
+dependencies:
+  - migrate_source_csv:migrate_source_csv
+  - migrate_plus:migrate_plus
+  - migrate_tools:migrate_tools
+  
+config_devel:
+ install:
+   - migrate_plus.migration_group.test_migration 

@@ -1,0 +1,28 @@
+# migrations metadata
+id: articles_import
+label: 'Articles import'
+migration_group: migration
+
+source:
+  plugin: custom_plugin
+ 
+destination:
+  plugin: entity:node
+
+
+process:
+  type:
+    plugin: default_value
+    default_value: article
+
+  title: post_title 
+  body: post_content
+  uid:
+    plugin: default_value
+    default_value: 1
+
+migration_dependencies:
+  required: { }
+
+dependencies: { }
+
